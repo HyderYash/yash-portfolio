@@ -170,7 +170,7 @@ export const projects: Project[] = [
     summary:
       'Full-stack AI platform for filmmakers. Real-time LUT previews, a creator dashboard, Stripe billing, and FFmpeg plus AWS Lambda handling the colour processing.',
     stack: ['Next.js', 'TypeScript', 'Node.js', 'FFmpeg', 'AWS Lambda', 'Stripe', 'Vercel'],
-    href: 'https://lutbuilder.ai',
+    href: 'https://www.lutbuilder.ai',
   },
   {
     slug: 'stillcollab',
