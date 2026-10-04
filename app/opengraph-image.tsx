@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 import { person } from '@/lib/site'
 
 // Generated at build time — no external asset to host, and it can never 404.
-export const alt = 'Yash Sharma — Backend & Systems Engineer'
+export const alt = 'Yash Sharma — Full-Stack Software Engineer'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -55,7 +55,7 @@ export default function OpengraphImage() {
               lineHeight: 1.3,
             }}
           >
-            Node.js · TypeScript · Redis · AWS
+            React · Next.js · TypeScript · Node.js
           </div>
         </div>
 
