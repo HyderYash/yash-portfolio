@@ -5,7 +5,7 @@
 // OG/Twitter images and JSON-LD all derive from it.
 // ─────────────────────────────────────────────────────────────────────────────
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yash-sharma.vercel.app'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://yash.webnaut.in'
 ).replace(/\/$/, '')
 
 export const person: {
@@ -20,7 +20,7 @@ export const person: {
   resumeHref: string | null
 } = {
   name: 'Yash Sharma',
-  role: 'Backend & Systems Engineer',
+  role: 'Full-Stack Software Engineer',
   location: 'Pune, Maharashtra, India',
   email: 'yashsharma.karate@gmail.com',
   linkedin: 'https://www.linkedin.com/in/yashsh21/',
@@ -29,7 +29,7 @@ export const person: {
   // Served from public/yash.jpg. Set back to null to fall back to the monogram
   // tile — the hero handles both without breaking.
   portrait: '/yash.jpg',
-  portraitAlt: 'Yash Sharma, backend and systems engineer based in Pune, India',
+  portraitAlt: 'Yash Sharma, full-stack software engineer based in Pune, India',
 
   // RÉSUMÉ — null so no dead link ships. To enable: copy the PDF into public/
   // and set this to '/yash-sharma-resume.pdf'.
@@ -38,28 +38,28 @@ export const person: {
 }
 
 export const meta = {
-  title: 'Yash Sharma — Backend & Systems Engineer',
-  // 155 chars.
+  title: 'Yash Sharma — Full-Stack Software Engineer',
   description:
-    'Backend and systems engineer building real-time, high-throughput services in Node.js, TypeScript, Redis and AWS. Founder of Refactyl. Based in Pune, India.',
+    'Full-stack software engineer building React and Next.js products, Node.js APIs, and developer tooling. Founder of Refactyl. Based in Pune, India.',
   keywords: [
     'Yash Sharma',
-    'backend engineer',
-    'systems engineer',
+    'full-stack software engineer',
+    'React developer',
+    'Next.js developer',
     'Node.js developer',
     'TypeScript developer',
-    'distributed systems',
+    'PostgreSQL',
     'Refactyl',
     'Pune developer',
   ],
 } as const
 
 export const intro = {
-  headline: 'I build backends that survive real load.',
-  body: `Backend and systems engineer working in Node.js, TypeScript, Redis and AWS. The problems
-    I like are the ones where correctness and throughput fight each other. Real-time event
-    pipelines. Caching you can trust. Migrations that fail loudly instead of quietly. I run
-    Refactyl, and I am studying B.Tech in Artificial Intelligence.`,
+  headline: 'I build useful software, end to end.',
+  body: `I build product interfaces, APIs, and data workflows with TypeScript, React, Next.js,
+    Node.js, and PostgreSQL. My work spans learning platforms, AI products, and developer
+    tooling. I am building Refactyl, an in-development workspace for application-stack
+    migration with explicit review and verification steps, while studying B.Tech in Artificial Intelligence.`,
 } as const
 
 export type SkillGroup = { label: string; items: string[] }
@@ -105,12 +105,12 @@ export const experience: Role[] = [
     title: 'Founder & Software Engineer',
     period: 'Dec 2025 — Present',
     summary:
-      'A developer tool that migrates and refactors production codebases onto modern frameworks. The output has to be a diff someone can actually read.',
+      'An in-development workspace for migrating applications across languages and frameworks while preserving what they do.',
     contributions: [
-      'Engineered a deterministic migration engine (Express to Fastify) benchmarked at 3.1× throughput, 12k to 38.9k req/s.',
-      'Gated every output behind the real compiler (tsc, @vue/compiler-sfc): a file ships only if the compiler accepts it, otherwise it is preserved and flagged rather than silently broken.',
+      'Building a workflow to inspect source applications, plan a migration, and review generated changes before adoption.',
+      'Designing explicit verification steps that surface test results, errors, and remaining uncertainty alongside the proposed code.',
     ],
-    stack: ['Node.js', 'TypeScript', 'Docker', 'PostgreSQL', 'Redis', 'AWS'],
+    stack: ['TypeScript', 'Next.js', 'Node.js'],
   },
   {
     slug: 'mighty-champions',
@@ -118,10 +118,10 @@ export const experience: Role[] = [
     title: 'Lead Web Engineer',
     period: 'Jan 2026 — Present',
     summary:
-      'Sole engineer for a preventive mental health education nonprofit. The whole web surface is mine, including the tooling behind their fellowship.',
+      'Lead web engineer for a preventive mental health education organization, working across program sites and its fellowship platform.',
     contributions: [
-      'Shipped 15+ production websites covering six audience programs: college, teens, women, men, 55+, physicians.',
-      'Engineered the end-to-end admissions platform: marketing site, application flow, enrollment portal, and an authenticated internal dashboard.',
+      'Built web experiences for its audience programs and the fellowship application and enrollment flows.',
+      'Developed learner progression features and administrative dashboards for program operations.',
     ],
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
   },
@@ -131,10 +131,10 @@ export const experience: Role[] = [
     title: 'Fractional Tech Lead',
     period: 'Mar 2026 — Jun 2026',
     summary:
-      'Engineering lead for an AI powered multilingual speaking coach. I owned the architecture and the team building it.',
+      'Technical lead for an AI-powered multilingual speaking coach, working with a team of 8 engineering interns.',
     contributions: [
-      'Owned architecture and technical direction while managing a team of 8 engineering interns.',
-      'Shipped core product features and the AI voice-feedback pipeline; introduced code review, CI/CD and a repeatable release process.',
+      'Set technical direction and coordinated implementation across the engineering team.',
+      'Worked on product features and the AI voice-feedback pipeline, including code review and release practices.',
     ],
   },
   {
@@ -143,10 +143,10 @@ export const experience: Role[] = [
     title: 'Independent Software Engineer',
     period: 'Mar 2021 — Dec 2025',
     summary:
-      'Backend work for products that had to hold up under real concurrency, across a long run of client engagements.',
+      'Built web products and backend services across independent client engagements.',
     contributions: [
-      'Architected backend systems for 10k+ concurrent users at sub-100 ms real-time latency, and event engines processing 2M+ events/day with strong consistency guarantees.',
-      'Cut API response times 40–60% with Redis caching and asynchronous pipelines.',
+      'Built React interfaces and Node.js/TypeScript APIs that connect product workflows to persisted data.',
+      'Worked across requirements, implementation, testing, and deployment for client-facing features.',
     ],
   },
 ]
@@ -191,7 +191,7 @@ export const education = {
   period: 'Aug 2025 — May 2029',
 } as const
 
-export const certifications = [
+export const professionalDevelopment = [
   { issuer: 'AWS', name: 'Cloud Practitioner Essentials' },
   { issuer: 'AWS', name: 'Technical Essentials' },
   { issuer: 'AWS', name: 'Getting Started with DevOps on AWS' },
@@ -211,30 +211,29 @@ export type Capability = { icon: 'gauge' | 'server' | 'workflow'; title: string;
 export const capabilities: Capability[] = [
   {
     icon: 'gauge',
-    title: 'Real-time systems',
-    body: 'WebSocket and event driven services holding sub-100 ms under real concurrency. The consistency guarantees have to survive the load test, not just the demo.',
-    tags: ['WebSockets', 'Event-driven', 'Redis'],
+    title: 'Web products',
+    body: 'React and Next.js interfaces connected to real application workflows, from enrollment to learner progress.',
+    tags: ['React', 'Next.js', 'TypeScript'],
   },
   {
     icon: 'server',
     title: 'APIs & services',
-    body: 'Node.js, Express and Fastify. I design the schema first and measure response times instead of guessing at them.',
-    tags: ['Node.js', 'Fastify', 'PostgreSQL', 'GraphQL'],
+    body: 'Node.js and TypeScript services that connect product features to data, integrations, and administrative tools.',
+    tags: ['Node.js', 'TypeScript', 'PostgreSQL', 'REST APIs'],
   },
   {
     icon: 'workflow',
-    title: 'Migrations & tooling',
-    body: 'Deterministic codebase transformation with the real compiler as the gate. If it does not compile, it does not ship.',
-    tags: ['TypeScript', 'Compilers', 'Docker'],
+    title: 'Migration tooling',
+    body: 'Building Refactyl to make application-stack changes reviewable, with explicit checks and visible uncertainty.',
+    tags: ['Refactyl', 'TypeScript', 'Verification'],
   },
 ]
 
-/** Every figure here is drawn from shipped work — see the Experience section. */
-export const stats = [
-  { to: 3.1, decimals: 1, suffix: '×', label: 'throughput gain', note: 'Express → Fastify' },
-  { to: 38.9, decimals: 1, suffix: 'k', label: 'req/s sustained', note: 'benchmarked' },
-  { to: 2, decimals: 0, suffix: 'M+', label: 'events/day', note: 'event engines' },
-  { to: 10, decimals: 0, suffix: 'k+', label: 'concurrent users', note: 'sub-100 ms' },
+export const focusAreas = [
+  { title: 'Web', label: 'Product interfaces', note: 'React · Next.js' },
+  { title: 'APIs', label: 'Backend workflows', note: 'Node.js · TypeScript' },
+  { title: 'AI', label: 'Developer tooling', note: 'Refactyl · in development' },
+  { title: 'Delivery', label: 'Engineering practice', note: 'Testing · CI/CD' },
 ]
 
 export const toolbelt = [
