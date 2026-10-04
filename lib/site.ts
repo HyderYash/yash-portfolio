@@ -111,6 +111,7 @@ export const experience: Role[] = [
       'Designing explicit verification steps that surface test results, errors, and remaining uncertainty alongside the proposed code.',
     ],
     stack: ['TypeScript', 'Next.js', 'Node.js'],
+    href: 'https://www.refactyl.com/',
   },
   {
     slug: 'mighty-champions',
@@ -124,6 +125,7 @@ export const experience: Role[] = [
       'Developed learner progression features and administrative dashboards for program operations.',
     ],
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+    href: 'https://www.mightychampions.org/',
   },
   {
     slug: 'voxa',
@@ -136,6 +138,7 @@ export const experience: Role[] = [
       'Set technical direction and coordinated implementation across the engineering team.',
       'Worked on product features and the AI voice-feedback pipeline, including code review and release practices.',
     ],
+    href: 'https://voxa.club/',
   },
   {
     slug: 'freelance',
@@ -181,7 +184,7 @@ export const projects: Project[] = [
       'Client platform for photographers and creative teams. Portfolio hosting, proofing and sign-off, and approval for social content.',
     // Stack intentionally empty — not yet supplied. The card omits the row.
     stack: [],
-    href: 'https://www.stillcollab.com',
+    href: 'https://stillcollab.com/',
   },
 ]
 
