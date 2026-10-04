@@ -250,7 +250,19 @@ export default function Page() {
                 <article className="grid gap-6 sm:grid-cols-[1fr_1.6fr] sm:gap-10">
                   <div>
                     <h3 className="font-display text-2xl font-semibold tracking-tight sm:text-[1.75rem]">
-                      {role.company}
+                      {role.href ? (
+                        <a
+                          href={role.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-baseline gap-2 transition-colors duration-200 hover:text-accent hover:underline focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                        >
+                          {role.company}
+                          <ArrowUpRight className="h-4 w-4 shrink-0" />
+                        </a>
+                      ) : (
+                        role.company
+                      )}
                     </h3>
                     <p className="mt-2 text-sm text-fg">{role.title}</p>
                     <p className="mt-1 text-sm text-dim">{role.period}</p>
