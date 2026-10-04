@@ -21,7 +21,7 @@ import {
 } from '@/components/Icons'
 import {
   capabilities,
-  certifications,
+  professionalDevelopment,
   education,
   experience,
   intro,
@@ -29,7 +29,7 @@ import {
   person,
   projects,
   skills,
-  stats,
+  focusAreas,
   toolbelt,
 } from '@/lib/site'
 
@@ -182,22 +182,17 @@ export default function Page() {
         </section>
 
 
-        {/* ── Numbers ───────────────────────────────────────────────────────── */}
+        {/* ── Focus areas ───────────────────────────────────────────────────── */}
         <section className="shell border-y border-line/60 py-12 sm:py-14">
           <dl className="grid grid-cols-2 gap-8 sm:gap-6 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div key={stat.label} data-reveal>
-                <dt className="sr-only">{`${stat.label} (${stat.note})`}</dt>
+            {focusAreas.map((area) => (
+              <div key={area.title} data-reveal>
+                <dt className="font-display text-[clamp(2rem,4.5vw,2.9rem)] font-bold tracking-tight text-fg">
+                  {area.title}
+                </dt>
                 <dd>
-                  <span className="font-display text-[clamp(2rem,4.5vw,2.9rem)] font-bold tracking-tight text-fg">
-                    {/* Counter ticks from 0; the static value is the SSR fallback. */}
-                    <span data-count-to={stat.to} data-count-decimals={stat.decimals}>
-                      {stat.to.toFixed(stat.decimals)}
-                    </span>
-                    <span className="text-accent">{stat.suffix}</span>
-                  </span>
-                  <span className="mt-1 block text-sm text-muted">{stat.label}</span>
-                  <span className="mt-0.5 block text-xs text-dim">{stat.note}</span>
+                  <span className="mt-1 block text-sm text-muted">{area.label}</span>
+                  <span className="mt-0.5 block text-xs text-dim">{area.note}</span>
                 </dd>
               </div>
             ))}
@@ -323,7 +318,7 @@ export default function Page() {
           </ul>
         </section>
 
-        {/* ── Skills, education, certifications ─────────────────────────────── */}
+        {/* ── Skills, education, professional development ──────────────────── */}
         <section id="skills" className="shell scroll-mt-24 py-20 sm:py-24">
           <h2 data-reveal className="eyebrow">
             Technical skills
@@ -365,10 +360,10 @@ export default function Page() {
             <div data-reveal>
               <h3 className="flex items-center gap-2 font-display text-sm font-semibold tracking-tight">
                 <Award className="h-4 w-4 text-accent" />
-                Certifications
+                Professional development
               </h3>
               <ul className="mt-3 space-y-2">
-                {certifications.map((cert) => (
+                {professionalDevelopment.map((cert) => (
                   <li key={`${cert.issuer}-${cert.name}`} className="text-[0.9375rem] text-muted">
                     <span className="text-dim">{cert.issuer}</span> — {cert.name}
                   </li>
@@ -414,8 +409,8 @@ export default function Page() {
               Building something that has to hold up? Let&rsquo;s talk.
             </h2>
             <p className="mt-6 max-w-[48ch] leading-relaxed text-muted">
-              Email is fastest. I am open to backend and systems work, and to problems that look
-              harder than they should be.
+              Email is fastest. I am open to remote full-stack and product engineering roles,
+              especially teams building useful web and AI products.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <a

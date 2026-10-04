@@ -89,15 +89,15 @@ function StructuredData() {
       name: education.school,
     },
     knowsAbout: [
-      'Backend engineering',
-      'Distributed systems',
+      'Full-stack software engineering',
+      'React',
+      'Next.js',
       'Node.js',
       'TypeScript',
-      'Redis',
-      'WebSockets',
-      'Event-driven architecture',
-      'Amazon Web Services',
-      'System design',
+      'PostgreSQL',
+      'Application programming interfaces',
+      'Developer tooling',
+      'Application-stack migration',
     ],
   }
 

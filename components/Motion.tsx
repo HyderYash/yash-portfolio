@@ -108,22 +108,6 @@ export default function Motion() {
             })
           })
 
-          // Stat counters tick up once, on first entry.
-          gsap.utils.toArray<HTMLElement>('[data-count-to]').forEach((el) => {
-            const to = Number(el.dataset.countTo)
-            const decimals = Number(el.dataset.countDecimals ?? 0)
-            if (Number.isNaN(to)) return
-            const proxy = { value: 0 }
-            gsap.to(proxy, {
-              value: to,
-              duration: 1.6,
-              ease: 'expo.out',
-              scrollTrigger: { trigger: el, start: 'top 90%', once: true },
-              onUpdate: () => {
-                el.textContent = proxy.value.toFixed(decimals)
-              },
-            })
-          })
         }, document.body)
       } catch {
         // Never trade content for animation: if GSAP fails to load, drop the
