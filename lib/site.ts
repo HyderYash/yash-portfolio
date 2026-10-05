@@ -116,10 +116,10 @@ export const experience: Role[] = [
   {
     slug: 'mighty-champions',
     company: 'Mighty Champions',
-    title: 'Lead Web Engineer',
-    period: 'Jan 2026 — Present',
+    title: 'Founding Engineer',
+    period: 'Jun 2025 — Present',
     summary:
-      'Lead web engineer for a preventive mental health education organization, working across program sites and its fellowship platform.',
+      'Founding engineer for a preventive mental health education organization, working across program sites and its fellowship platform.',
     contributions: [
       'Built web experiences for its audience programs and the fellowship application and enrollment flows.',
       'Developed learner progression features and administrative dashboards for program operations.',
