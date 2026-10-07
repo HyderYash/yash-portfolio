@@ -142,11 +142,11 @@ export const experience: Role[] = [
   },
   {
     slug: 'freelance',
-    company: 'Self-Employed',
-    title: 'Independent Software Engineer',
+    company: 'Independent Work',
+    title: 'Software Engineer (project-based)',
     period: 'Mar 2021 — Dec 2025',
     summary:
-      'Built web products and backend services across independent client engagements.',
+      'Built selected client and independent web products and backend services during this period.',
     contributions: [
       'Built React interfaces and Node.js/TypeScript APIs that connect product workflows to persisted data.',
       'Worked across requirements, implementation, testing, and deployment for client-facing features.',
